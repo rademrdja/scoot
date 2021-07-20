@@ -1,0 +1,1223 @@
+/*----------------------------------------------------------
+
+1. YELLOW:         #FCB72B;
+2. DARK BLUE:      #495567;
+3. GREY:           #939CAA;
+4. LIGHT GREY:     #E5ECF4;
+5. LIGHT YELLOW:   #FFF4DF;
+6. SNOW:           #F2F5F9;
+
+----------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	color: #495567;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Space Mono', monospace;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -2.5px;
+	color: #FFFFFF;
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -2.14px;
+}
+
+h3 {
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: -1.79px;
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -1.07px;
+	margin-bottom: 27px;
+}
+
+section {
+	padding: 80px 10%;
+}
+
+p {
+	color: #939CAA;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									NAVIGATION BAR
+-----------------------------------------------------------------------------------------------*/
+
+nav,
+footer {
+	height: 96px;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10%;
+}
+
+footer {
+	background-color: #333A44;
+}
+
+.nav-container,
+.footer-container {
+	display: flex;
+	align-items: center;
+}
+
+.toggle {
+	display: none;
+	cursor: pointer;
+}
+
+.toggle-nav {
+	height: calc(100vh - 64px);
+	width: 100%;
+	position: absolute;
+	top: 64px;
+	left: 0;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	animation: fade .3s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.toggle-nav-container {
+	height: calc(100% - 48px);
+	width: 190px;
+	background-color: #333A44;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 24px 32px;
+}
+
+.toggle-nav-container .nav-menu {
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+}
+
+.toggle-nav-container .nav-menu li {
+	margin-left: 0;
+	margin-bottom: 24px;
+}
+
+.logo-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-menu li {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.nav-menu li a {
+	font-family: 'Space Mono', monospace;
+	font-weight: 700;
+	color: #939CAA;
+	transition: .3s ease;
+}
+
+.nav-menu li a:hover {
+	font-family: 'Space Mono', monospace;
+	color: #FCB72B;
+	transition: .3s ease;
+}
+
+.footer-social i {
+	font-size: 20px;
+	color: #FCB72B;
+	transition: .3s ease;
+	margin-left: 24px;
+	cursor: pointer;
+}
+
+.footer-social i:hover {
+	color: #E5ECF4;
+	transition: .3s ease;
+}
+
+.logo {
+	margin-right: 25px;
+}
+
+.button {
+	background-color: #FCB72B;
+	border: 2px solid #FCB72B;
+	color: white;
+	transition: .3s ease;
+	width: 175px;
+	height: 49px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button:hover {
+	background-color: transparent;
+	border: 2px solid #FCB72B;
+	color: #FCB72B;
+	transition: .3s ease;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									HEADER
+-----------------------------------------------------------------------------------------------*/
+
+header {
+	height: 650px;
+	background-image: url(images/home-hero-desktop.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	padding: 0 10%;
+	position: relative;
+}
+
+header h1,
+header p {
+	color: #FFFFFF;
+}
+
+.header-text {
+	width: 50%;
+}
+
+.header-text h1 {
+	margin-bottom: 40px;
+}
+
+.header-text p {
+	margin-left: 100px;
+	margin-bottom: 40px;
+}
+
+.header-text .button {
+	margin-left: 100px;
+}
+
+.header-line-desktop {
+	position: absolute;
+	top: 350px;
+	left: 0;
+}
+
+.header-arrow-desktop {
+	position: absolute;
+	top: 350px;
+	left: 52%;
+}
+
+.header-circles-desktop {
+	position: absolute;
+	top: 430px;
+	right: -50px;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									CARDS SECTION
+-----------------------------------------------------------------------------------------------*/
+
+#cards {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding-top: 160px;
+	padding-bottom: 120px;
+}
+
+.card {
+	width: 30%;
+	position: relative;
+	z-index: 99;
+}
+
+.cards-long-line {
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	z-index: 90;
+}
+
+.cards-vertical-line {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 50px;
+}
+
+.card img {
+	margin-bottom: 40px;
+}
+
+.card p {
+	color: #939CAA;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									RIGHT SECTION
+-----------------------------------------------------------------------------------------------*/
+
+#section-right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.section-text {
+	width: 45%;
+}
+
+.section-text h2 {
+	margin-bottom: 20px;
+}
+
+.section-text p {
+	margin-bottom: 40px;
+	width: 90%;
+}
+
+.section-right-img-1 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/telemetry.jpg);
+	background-position: center;
+}
+
+.section-right-img-2 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/payments.jpg);
+	background-position: center;
+}
+
+.section-right-arrow-desktop {
+	position: absolute;
+	right: -50px;
+	top: 380px;
+	z-index: 99;
+}
+
+.section-right-circle-desktop {
+	position: absolute;
+	top: 80px;
+	right: -350px;
+	z-index: 90;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									LEFT SECTION
+-----------------------------------------------------------------------------------------------*/
+
+#section-left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.section-left-img-1 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/near-you.jpg);
+	background-position: center;
+}
+
+.section-left-arrow-desktop {
+	position: absolute;
+	left: -100px;
+	top: 100px;
+	z-index: 99;
+}
+
+.section-left-circle-desktop {
+	position: absolute;
+	top: 80px;
+	left: -350px;
+	z-index: 90;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									SIGN UP SECTION
+-----------------------------------------------------------------------------------------------*/
+
+#signup {
+	margin-top: 120px;
+	padding: 100px 10%;
+	background-color: #495567;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+#signup h2 {
+	color: #FFFFFF;
+	width: 40%;
+}
+
+.signup-images img {
+	margin-left: 18px;
+	position: relative;
+	z-index: 99;
+}
+
+.signup-circles-desktop {
+	position: absolute;
+	bottom: 0;
+	right: -200px;
+	z-index: 90;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									ABOUT PAGE
+-----------------------------------------------------------------------------------------------*/
+
+.page-header {
+	height: 200px;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	background-image: url(images/about-hero-desktop.jpg);
+	background-position: center;
+	margin-bottom: 40px;
+}
+
+.header-circles-page-desktop {
+	position: absolute;
+	right: -30px;
+}
+
+.section-right-upward-arrow-desktop {
+	position: absolute;
+	right: -50px;
+	top: 350px;
+	z-index: 99;
+}
+
+.section-right-img-3 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/digital-era.jpg);
+}
+
+.about-left-section {
+	padding-top: 40px;
+}
+
+.section-left-img-2 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/better-living.jpg);
+}
+
+#values {
+	padding-top: 40px;
+}
+
+#values h3 {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.values-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.value-card {
+	width: 35%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.value-number {
+	width: 96px;
+	height: 96px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #FCB72B;
+	position: relative;
+	top: -32px;
+}
+
+.value-number h4 {
+	margin-bottom: 0;
+}
+
+.value-img-1 {
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background-image: url(images/our-tech.jpg);
+}
+
+.value-img-2 {
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background-image: url(images/our-integrity.jpg);
+}
+
+.value-img-3 {
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background-image: url(images/our-community.jpg);
+}
+
+#faqs {
+	padding-bottom: 44px;
+}
+
+#faqs h3 {
+	text-align: center;
+	margin-bottom: 64px;
+}
+
+.faqs-cards {
+	width: 65%;
+}
+
+.faqs-cards div {
+	background-color: #F2F5F9;
+}
+
+.faqs-cards div img {
+	cursor: pointer;
+}
+
+.flip {
+	transform: rotate(-180deg);
+}
+
+.first-card {
+	margin-top: 0px;
+	padding: 32px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.faqs-cards-child {
+	margin-top: 16px;
+	padding: 32px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container-1,
+.container-2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container-1 {
+	margin-bottom: 48px;
+}
+
+.faqs-cards div h4 {
+	margin-bottom: 0;
+}
+
+.objasnjenje {
+	margin-top: 0px;
+	padding: 0 40px 32px 40px;
+	display: none;
+}
+
+.objasnjenje p {
+	color: #495567;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									CAREERS PAGE
+-----------------------------------------------------------------------------------------------*/
+
+.careers-header {
+	background-image: url(images/careers-locations-hero-desktop.jpg);
+}
+
+.section-right-img-4 {
+	width: 445px;
+	height: 445px;
+	border-radius: 50%;
+	background-image: url(images/join-us.jpg);
+}
+
+#jobs {
+	padding-bottom: 36px;
+}
+
+.job-offer {
+	background-color: #F2F5F9;
+	padding: 32px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.jobs-text h4 {
+	margin-bottom: 8px;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									LOCATIONS PAGE
+-----------------------------------------------------------------------------------------------*/
+
+#map div {
+	height: 550px;
+	background-image: url(images/world-map-desktop.svg);
+	background-position: top;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#city-div {
+	display: none;
+	padding-top: 0;
+}
+
+#city-div div {
+	height: 72px;
+	background-color: #FFF4DF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+#city-div h3 {
+	font-size: 24px;
+	color: #495567;
+	opacity: 1;
+}
+
+#city {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+#city h2 {
+	width: 30%;
+}
+
+#city p {
+	width: 40%;
+}
+
+/*-----------------------------------------------------------------------------------------------
+									RESPONSIVE
+-----------------------------------------------------------------------------------------------*/
+
+@media all and (max-width: 1350px) {
+	.header-circles-desktop {
+		right: -100px;
+	}
+}
+
+@media all and (max-width: 1250px) {
+
+	.header-arrow-desktop {
+		left: 55%;
+	}
+
+	.header-circles-desktop {
+		display: none;
+	}
+
+	.header-text {
+		width: 55%;
+	}
+}
+
+@media all and (max-width: 1000px) {
+
+	.header-arrow-desktop {
+		left: 60%;
+	}
+
+	.header-line-desktop {
+		left: -15px;
+	}
+
+	.header-text {
+		width: 60%;
+	}
+}
+
+@media all and (max-width: 900px) {
+
+	nav,
+	footer {
+		padding: 0 5%;
+	}
+
+	header {
+		background-image: url(images/home-hero-tablet.jpg);
+	}
+
+	.header-line-desktop {
+		display: none;
+	}
+
+	.header-text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: relative;
+		top: -50px;
+	}
+
+	.header-text h1 {
+		margin-bottom: 24px;
+	}
+
+	.header-text p {
+		margin-left: 0;
+		margin-bottom: 32px;
+	}
+
+	.header-text .button {
+		margin-left: 0;
+	}
+
+	.header-arrow-desktop {
+		top: 430px;
+		left: -150px;
+	}
+
+	.header-circles-desktop {
+		top: 500px;
+		display: block;
+	}
+
+	.cards-long-line {
+		display: none;
+	}
+
+	#cards {
+		flex-direction: column;
+		padding-top: 122px;
+		padding-bottom: 25px;
+	}
+
+	.card {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	.card div {
+		width: 70%;
+	}
+
+	.cards-vertical-line {
+		z-index: 90;
+		left: 15%;
+		display: block;
+	}
+
+	#section-right {
+		flex-direction: column-reverse;
+	}
+
+	#section-left {
+		flex-direction: column;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.section-right-img-1,
+	.section-right-img-2,
+	.section-left-img-1,
+	.section-right-img-3,
+	.section-left-img-2,
+	.section-right-img-4 {
+		margin-bottom: 56px;
+	}
+
+	.section-text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.section-text h2 {
+		margin-bottom: 40px;
+		width: 80%;
+	}
+
+	.section-text p {
+		margin-bottom: 40px;
+	}
+
+	.section-right-arrow-desktop {
+		position: absolute;
+		right: -30px;
+		top: 380px;
+		z-index: 99;
+	}
+
+	#signup {
+		margin-top: 24px;
+		flex-direction: column;
+		padding: 62px 10%;
+	}
+
+	#signup h2 {
+		width: 70%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.page-header {
+		margin-bottom: 64px;
+		background-image: url(images/about-hero-tablet.jpg);
+	}
+
+	#values {
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+
+	#values h3 {
+		margin-bottom: 45px;
+	}
+
+	.values-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.value-card {
+		width: 75%;
+		margin-top: 55px;
+	}
+
+	#faqs {
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 96px;
+	}
+
+	#faqs h3 {
+		margin-bottom: 32px;
+	}
+
+	.container-1,
+	.container-2 {
+		flex-direction: column;
+	}
+
+	.container-1 {
+		margin-bottom: 64px;
+	}
+
+	.faqs-cards {
+		width: 100%;
+	}
+
+	.careers-header {
+		background-image: url(images/careers-locations-hero-tablet.jpg);
+	}
+
+	#jobs {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	#map {
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 64px;
+	}
+
+	#map div {
+		background-image: url(images/world-map-tablet.svg);
+		height: 350px;
+	}
+
+	#city {
+		flex-direction: column;
+		padding-top: 0px;
+		padding-bottom: 96px;
+	}
+
+	#city h2 {
+		width: 80%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	#city p {
+		text-align: center;
+		width: 95%;
+		margin-bottom: 40px;
+	}
+
+}
+
+@media all and (max-width: 600px) {
+
+	nav {
+		height: 64px;
+		justify-content: center;
+	}
+
+	.logo {
+		width: 75px;
+		margin-right: 0;
+	}
+
+	.toggle {
+		display: block;
+		position: absolute;
+		left: 5%;
+	}
+
+	nav .nav-menu {
+		display: none;
+	}
+
+	nav .button {
+		display: none;
+	}
+
+	h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	header {
+		background-image: url(images/home-hero-mobile.jpg);
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	.header-circles-desktop {
+		display: none;
+	}
+
+	.header-arrow-desktop {
+		top: 470px;
+		left: -320px;
+	}
+
+	.header-text {
+		top: -20px;
+	}
+
+	.cards-vertical-line {
+		display: none;
+	}
+
+	#cards {
+		padding: 40px 9%;
+		align-items: center;
+		padding-top: 72px;
+	}
+
+	.card {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-top: 48px;
+		margin-bottom: 0;
+	}
+
+	.card div {
+		width: 100%;
+	}
+
+	.card img {
+		width: 56px;
+		margin-bottom: 24px;
+	}
+
+	.card h4 {
+		text-align: center;
+	}
+
+	.card p {
+		text-align: center;
+	}
+
+	h4 {
+		font-size: 20px;
+		margin-bottom: 24px;
+	}
+
+	.section-right-circle-desktop,
+	.section-left-circle-desktop {
+		display: none;
+	}
+
+	.section-right-img-1,
+	.section-right-img-2,
+	.section-left-img-1,
+	.section-right-img-3,
+	.section-left-img-2,
+	.section-right-img-4 {
+		width: 311px;
+		height: 311px;
+		background-size: contain;
+		background-position: right;
+		margin-bottom: 56px;
+	}
+
+	section {
+		padding-left: 9%;
+		padding-right: 9%;
+	}
+
+	.section-right-arrow-desktop {
+		right: -410px;
+		top: 250px;
+	}
+
+	.last {
+		top: 80px;
+		right: -500px;
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 32px;
+		margin-bottom: 32px;
+	}
+
+	.section-text h2,
+	.section-text p {
+		width: 100%;
+	}
+
+	.section-left-arrow-desktop {
+		left: -180px;
+		top: 40px;
+	}
+
+	#signup {
+		margin-top: 40px;
+	}
+
+	#signup h2 {
+		width: 100%;
+		margin-bottom: 34px;
+	}
+
+	.signup-images {
+		display: flex;
+	}
+
+	.signup-images img {
+		margin: 6px;
+	}
+
+	.apple {
+		width: 114px;
+		margin-right: 12px;
+	}
+
+	.google-play {
+		width: 130px;
+	}
+
+	footer {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.footer-container {
+		flex-direction: column;
+	}
+
+	footer .nav-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 40px;
+		margin-bottom: 68px;
+	}
+
+	footer .nav-menu li {
+		margin-bottom: 16px;
+		margin-left: 0;
+	}
+
+	.footer-social i {
+		margin: 0px 10px;
+	}
+
+	.page-header {
+		height: 160px;
+		justify-content: center;
+		background-image: url(images/about-hero-mobile.jpg);
+		margin-bottom: 0;
+	}
+
+	.header-circles-page-desktop {
+		display: none;
+	}
+
+	.section-right-upward-arrow-desktop {
+		position: absolute;
+		right: -400px;
+		top: 250px;
+		z-index: 99;
+	}
+
+	.about-left-section {
+		padding-top: 72px;
+	}
+
+	h3 {
+		font-size: 32px;
+		margin-bottom: 0px;
+	}
+
+	#values h3 {
+		margin-bottom: 0;
+	}
+
+	.value-card {
+		width: 100%;
+	}
+
+	#faqs {
+		padding-top: 105px;
+	}
+
+	.first-card {
+		padding: 32px 32px;
+	}
+
+	.faqs-cards-child {
+		padding: 32px 32px;
+	}
+
+	.objasnjenje {
+		padding: 0px 32px 32px 32px;
+	}
+
+	#jobs {
+		padding-top: 105px;
+		padding-bottom: 42px;
+	}
+
+	.job-offer {
+		padding: 32px;
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+
+	.jobs-text {
+		margin-bottom: 16px;
+	}
+
+	.job-offer .button {
+		width: 100%;
+	}
+
+	#map div {
+		height: 150px;
+		background-image: url(images/world-map-mobile.svg);
+	}
+
+	#city {
+		padding-bottom: 32px;
+	}
+
+	#city-div {
+		display: block;
+	}
+
+}
+
+@media all and (max-width: 350px) {
+
+	.section-right-img-1,
+	.section-right-img-2,
+	.section-left-img-1,
+	.section-right-img-3,
+	.section-left-img-2,
+	.section-right-img-4 {
+		width: 280px;
+		height: 280px;
+	}
+
+	.section-right-arrow-desktop {
+		right: -450px;
+	}
+
+	.section-right-upward-arrow-desktop {
+		right: -450px;
+	}
+
+}
